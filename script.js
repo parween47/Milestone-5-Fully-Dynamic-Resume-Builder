@@ -129,7 +129,7 @@ function buildResume() {
         inputImage.style.cssText = 'width: 11.5em; height: 11.5em; ';
     }
     else {
-        currentImage.src = "images/default image.webp";
+        currentImage.src = "default image.webp";
     }
     const linkdinSection = document.getElementById("linkdinSection");
     if (!linkdin) {
@@ -160,18 +160,8 @@ function downloadPDF() {
     const sharePdf = document.getElementById("pdf");
     ShareUrl.style.display = "none";
     sharePdf.style.display = "none";
-    const style = document.createElement('style');
-    style.innerHtml = `
-  @page{
-  size=A4 portrait;
-  margin=1cm;
-  }
-  body{
-    margin=0;
-  }`;
-    document.head.appendChild(style);
+    
     window.print();
-    document.head.removeChild(style);
 }
 (_a = document.getElementById('pdf')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', downloadPDF);
 const shareButton = document.getElementById("shareResumeButton");
