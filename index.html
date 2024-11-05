@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title>Dynamic Editable Resume</title>
+</head>
+
+<body>
+  <h1 class="first-heading">Resume Buider Application By Mohammad Ubaid</h1>
+  <form id="myForm">
+    <fieldset>
+      <legend>Personal information<br>
+        <pre id="hideInresponse">(must provide all information)</pre>
+      </legend>
+      <label for="name">Name :</label>
+      <input type="text" id="name" required>
+      <br>
+      <label for="jobTitle">Job title :</label>
+      <input type="text" id="jobTitle" required>
+      <br>
+      <label for="email">Email :</label>
+      <input type="email" id="email" required>
+      <br>
+      <label for="phone">Contact :</label>
+      <input type="tel" name="phone" id="phone" required>
+      <br>
+      <label for="linkdin">Linkdin :</label>
+      <input type="text" name="linkdin" id="linkdin" required>
+      <br>
+      <label for="phone">Address :</label>
+      <input type="Address" name="Address" id="address" required>
+      <br>
+      <label for="profileImage">Profile pic :<span id="pfp-description">(make sure your profile pic is professional and
+          in square
+          shape)</span>
+      </label>
+      <input type="file" id="profileImage" accept="image">
+      <br>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>Personal Detail</legend>
+      <label for="Personal Detail">
+        <textarea name="Personal Detail" id="personalDetail" required></textarea>
+      </label>
+    </fieldset>
+    <br>
+    <br>
+    <fieldset>
+      <legend>Certification</legend>
+      <label for="Certification">
+        <p> "course name, academy name , year-year ,......"</p>
+        <input type="text" name="certification" id="certificate" required>
+      </label>
+    </fieldset>
+    <br>
+    <br>
+    <fieldset>
+      <legend>Education</legend>
+      <label for="education">
+        <p>"degree name, academy name , year-year ,......"</p>
+        <input name="education" id="education" required></input>
+      </label>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>Experience</legend>
+      <label for="experience">
+        <p>"post , company name , year-year ,......"</p>
+        <input name="experience" id="experience" required></input>
+      </label>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>Skills</legend>
+      <label for="skill">
+        <p>"first skill, sec skill , third skill ,......"</p>
+        <input type="text" id="skills" required>
+      </label>
+    </fieldset>
+    <br>
+    <button type="submit" class="generate-button" id="getResumeButton">Get Resume</button>
+  </form>
+
+
+  <div class="cv">
+    <div class="side">
+      <div class="info">
+        <div class="pfp">
+          <img src="images/profile pic.webp" alt="pfp" id="profilePic" />
+        </div>
+        <h3 id="personalInformation">Personal Information</h3>
+        <br />
+        <p><strong><i class="fas fa-phone-volume" style="padding-right: 5px;"></i>Contact:</strong></p>
+        <p><span id="phoneCv"  contenteditable="true">03122134810</span></p>
+        <br />
+        <p><strong><i class="fas fa-envelope-open-text" style="padding-right: 5px;"></i>Email:</strong></p>
+        <p><span id="emailCv"  contenteditable="true">parweensiraj9@gmail.com</span></p>
+        <br />
+        <p><strong><i class="fas fa-map-marker-alt" style="padding-right: 5px;"></i>Address:</strong></p>
+        <p><span id="addressCv"  contenteditable="true">Block# 19/18, 5/d, new karachi, Karachi</span></p>
+        <br />
+        
+<div id="linkdinSection">
+  <p ><strong><i class="fab fa-linkedin" style="padding-right: 5px;"></i>Linkdin:</strong></p>
+  <p ><span id="linkdinCv" contenteditable="true">Ubaid Qureshi</span></p>
+</div>
+<br />
+        <br />
+        <hr />
+        <br />
+
+        <div id="skills">
+          <h3>Skills</h3>
+          <br />
+          <ul id="skillsCv"  contenteditable="true">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Next.js</li>
+          </ul>
+        </div>
+        <br />
+        <button id="toggle">Hide Skills</button>
+      </div>
+    </div>
+    <div class="main">
+      <div class="name">
+        <h1 id="nameCv"  contenteditable="true"><big>UBAID UDDIN QURESHI</big></h1>
+        <h4 id="jobTitleCv" contenteditable="true">FRONTEND DEVELOPVER</h4>
+      </div>
+      <div class="information">
+        <h3 style="text-align: left">PERSONAL DETAILS</h3>
+        <br />
+        <p style="text-align: left"><span id="personalDetailCv" contenteditable="true">
+            I am currently pursuing the Certified Cloud Applied Generative AI Engineering program at Governor House
+            Karachi.
+            With a solid foundation in TypeScript from the first quarter, I am now focused on mastering frontend
+            development using Next.js.
+            My academic journey is geared towards building modern, efficient web applications and contributing to the
+            rapidly
+            growing field of cloud and AI technologies.
+          </span>
+        </p>
+
+        <br />
+
+<!-- Experience Section -->
+<div id="experienceSection">
+  <h3>WORK EXPERIENCE</h3>
+  <br />
+  <div id="experienceCv">
+    <p style="float: right" contenteditable="true">2023-24</p>
+    <p><b contenteditable="true">Business Developer</b></p>
+    <p contenteditable="true">Artex digital</p>
+  </div>
+</div>
+
+<br />
+
+<!-- Certification Section -->
+<div id="certificationSection">
+  <h3>CERTIFICATION</h3>
+  <br />
+  <div id="certificationContainer">
+    <p style="float: right" id="yearCv" contenteditable="true">2023-25</p>
+    <p><b><span id="courseNameCv" contenteditable="true">Certified Cloud Applied Generative AI Engineering</span></b></p>
+    <p id="academyCv" contenteditable="true">Governor House</p>
+  </div>
+</div>
+
+<br />
+
+<!-- Education Section -->
+<div id="educationSection">
+  <h3>EDUCATION</h3>
+  <br />
+  <div id="educationCv">
+    <p style="float: right" contenteditable="true">2022-24</p>
+    <p><b contenteditable="true">Intermidiate</b></p>
+    <p contenteditable="true">Alkhair College</p>
+    <br />
+    <p style="float: right" contenteditable="true">2007-22</p>
+    <p><b contenteditable="true">Matriculation</b></p>
+    <p contenteditable="true">Nasra Secondary School</p>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="pdf" >Get PDF</button>
+  <button id="shareResumeButton" >Get Resume Link</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
