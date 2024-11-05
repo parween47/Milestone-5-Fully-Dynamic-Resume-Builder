@@ -154,7 +154,7 @@ function buildResume() {
     let inputImage= currentImage
     inputImage.style.cssText = 'width: 11.5em; height: 11.5em; ';
   } else {
-    currentImage.src = "images/default image.webp";
+    currentImage.src = "default image.webp";
   }
   const linkdinSection = document.getElementById("linkdinSection") as HTMLElement;
   if (!linkdin) {
@@ -190,19 +190,8 @@ function downloadPDF(): void {
 
   ShareUrl.style.display = "none";
   sharePdf.style.display = "none";
-
-  const style: any = document.createElement('style')
-  style.innerHtml=`
-  @page{
-  size=A4 portrait;
-  margin=1cm;
-  }
-  body{
-    margin=0;
-  }`
-  document.head.appendChild(style)
+  
   window.print();
-  document.head.removeChild(style)
 
 }
 
